@@ -1,10 +1,9 @@
 buildscript {
     repositories {
-        // mavenLocal()
         maven { url 'https://plugins.gradle.org/m2/' }
     }
     dependencies {
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:${kotlinVersion}") {
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.1.4-2") {
             // temporary workaround for incompatibility of commons-lang:2.4 with
             // versioning scheme of Java 9
             // see: https://youtrack.jetbrains.com/issue/KT-18832
@@ -13,3 +12,5 @@ buildscript {
         classpath 'commons-lang:commons-lang:2.6'
     }
 }
+
+apply plugin: 'kotlin'
